@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:islami_app/models/hadith.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../common/app_images.dart';
 import '../../../common/text_styles.dart';
 
@@ -23,7 +24,7 @@ class HadithDetailsScreen extends StatelessWidget {
               fit: BoxFit.cover)
       ),
       child: Scaffold(
-          appBar: AppBar(title: Text('Hadith Data'),),
+          appBar: AppBar(title: Text(AppLocalizations.of(context)!.hadithData),),
           body: Center(
             child: Container(
               width: 354,
@@ -41,7 +42,11 @@ class HadithDetailsScreen extends StatelessWidget {
                     endIndent: 10,
                     thickness: 3,
                   ),
-                  SingleChildScrollView(child: Text(hadith.text,style: AppTextStyles.suraHadithText,textAlign: TextAlign.center,textDirection: TextDirection.rtl,))
+                  Expanded(
+                    child: SingleChildScrollView(
+                        child: Text(hadith.text,style: AppTextStyles.suraHadithText,textAlign: TextAlign.center,textDirection: TextDirection.rtl,),
+                    ),
+                  )
                 ],
               ),
             ),

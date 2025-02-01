@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/common/app_images.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/ui/settings.dart';
 import 'package:islami_app/ui/taps/hadith/hadith.dart';
 import 'package:islami_app/ui/taps/quran/quran.dart';
@@ -39,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
               fit: BoxFit.cover)),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Islami'),
+          title: Text(AppLocalizations.of(context)!.islamy),
         ),
         body: taps[index],
         bottomNavigationBar: BottomNavigationBar(

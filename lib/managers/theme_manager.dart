@@ -6,7 +6,12 @@ class ThemeManager with ChangeNotifier{
     appThemeMode=themeMode;
     notifyListeners();
   }
+   changeLocale(String locale){
+     appLocale=locale;
+     notifyListeners();
+   }
   bool get isDark=>appThemeMode==ThemeMode.dark;
    ThemeMode appThemeMode=ThemeMode.dark;
+   String appLocale='en';
 
 }

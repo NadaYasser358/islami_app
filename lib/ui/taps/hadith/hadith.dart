@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/models/hadith.dart';
 import 'package:islami_app/ui/taps/hadith/hadith_details_screen.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../common/app_images.dart';
 import '../../../common/text_styles.dart';
 
@@ -29,7 +29,7 @@ class _HadithTapState extends State<HadithTap> {
           thickness: 3,
           color: Theme.of(context).colorScheme.outline,
         ),
-        Text('Hadith #',style: AppTextStyles.subTitles,textAlign: TextAlign.center),
+        Text(AppLocalizations.of(context)!.hadithNum,style: AppTextStyles.subTitles,textAlign: TextAlign.center),
         Divider(
           thickness: 3,
           color: Theme.of(context).colorScheme.outline,

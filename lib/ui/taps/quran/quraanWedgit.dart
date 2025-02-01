@@ -18,8 +18,8 @@ class QuranWidget extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Expanded(child: Text(sura.type,style: AppTextStyles.suraHadith,textAlign: TextAlign.center)),
             Expanded(child: Text(sura.name,style: AppTextStyles.suraHadith,textAlign: TextAlign.center,)),
+            Expanded(child: Text(sura.type,style: AppTextStyles.suraHadith,textAlign: TextAlign.center)),
           ],
         ),
       ),

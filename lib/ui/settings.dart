@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/common/app_colors.dart';
 import 'package:islami_app/common/text_styles.dart';
 import 'package:islami_app/managers/theme_manager.dart';
 import 'package:provider/provider.dart';
@@ -29,6 +28,23 @@ class _SettingsTapState extends State<SettingsTap> {
           inactiveThumbColor: Colors.black,
           // thumbColor: ,
         ),
+        ListTile(
+          title: Text("Language",style: AppTextStyles.suraHadith,),
+          trailing: DropdownButton<String>(
+            underline: Container(),
+            items: [
+              DropdownMenuItem(child: Text("English",style: AppTextStyles.suraHadithText,),value: "en",),
+              DropdownMenuItem(child: Text("عربي",style: AppTextStyles.suraHadithText,),value: "ar",),
+            ],
+            value: Provider.of<ThemeManager>(context).appLocale,
+            borderRadius: BorderRadius.circular(25),
+            dropdownColor: Theme.of(context).colorScheme.outline.withOpacity(0.5),
+            onChanged: (value) {
+              if(value!=null)
+                Provider.of<ThemeManager>(context,listen: false).changeLocale(value);
+            },
+          ),
+        )
       ],
     );
   }

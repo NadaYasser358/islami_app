@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/common/app_images.dart';
 import 'package:islami_app/common/text_styles.dart';
 import 'package:islami_app/ui/taps/quran/quraanWedgit.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../models/sura.dart';
 
 class QuranTap extends StatelessWidget {
@@ -25,8 +25,8 @@ class QuranTap extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Expanded(child: Text('sura type',style: AppTextStyles.subTitles,textAlign: TextAlign.center)),
-                Expanded(child: Text('sura name',style: AppTextStyles.subTitles,textAlign: TextAlign.center,)),
+                Expanded(child: Text(AppLocalizations.of(context)!.suraName,style: AppTextStyles.subTitles,textAlign: TextAlign.center,)),
+                Expanded(child: Text(AppLocalizations.of(context)!.suraType,style: AppTextStyles.subTitles,textAlign: TextAlign.center)),
               ],
             ),
             Divider(
