@@ -3,6 +3,10 @@
 "suraName":"Sura Name",
 "suraType":"Sura Type",
 "hadithNum":"Hadith #",
-"hadithData":"Hadith Data"
+"hadithData":"Hadith Data",
+"sebhaNum":"Number of Sebha",
+"darkMode":"Dark Mode",
+"language":"Language"
+
 
 }

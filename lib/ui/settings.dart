@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/common/text_styles.dart';
 import 'package:islami_app/managers/theme_manager.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SettingsTap extends StatefulWidget {
   const SettingsTap({super.key});
@@ -17,7 +18,7 @@ class _SettingsTapState extends State<SettingsTap> {
     return Column(
       children: [
         SwitchListTile.adaptive(
-          title: const Text("Dark Mode",style: AppTextStyles.suraHadith,),
+          title: Text(AppLocalizations.of(context)!.darkMode,style: AppTextStyles.suraHadith,),
             value: Provider.of<ThemeManager>(context).isDark,
             onChanged: (value){
               Provider.of<ThemeManager>(context, listen: false).changeThemeMode(value?ThemeMode.dark:ThemeMode.light);
@@ -29,7 +30,7 @@ class _SettingsTapState extends State<SettingsTap> {
           // thumbColor: ,
         ),
         ListTile(
-          title: Text("Language",style: AppTextStyles.suraHadith,),
+          title: Text(AppLocalizations.of(context)!.language,style: AppTextStyles.suraHadith,),
           trailing: DropdownButton<String>(
             underline: Container(),
             items: [
