@@ -48,10 +48,23 @@ class SuraDetailsScreen extends StatelessWidget {
                   thickness: 3,
                 ),
                 Expanded(
-                    child: ListView.builder(
-                        itemCount: sura.verses.length,
-                        itemBuilder: (context,index)=>Text('${sura.verses[index]}(${index+1})',textAlign: TextAlign.center,textDirection: TextDirection.rtl,style: AppTextStyles.suraHadithText,)
-                    ))
+                  child: ListView(
+                    children: [
+                      RichText(text: TextSpan(
+                        children: sura.verses.map((e) => TextSpan(text: '$e(${sura.verses.indexOf(e)+1}) ')).toList(),
+                        style: AppTextStyles.suraHadithText,
+
+                      ),
+                          textAlign: TextAlign.center,
+                          textDirection: TextDirection.rtl
+                      )
+                    ],
+                  ),
+                    // child: ListView.builder(
+                    //     itemCount: sura.verses.length,
+                    //     itemBuilder: (context,index)=>Text('${sura.verses[index]}(${index+1})',textAlign: TextAlign.center,textDirection: TextDirection.rtl,style: AppTextStyles.suraHadithText,)
+                    // )
+                )
               ],
             ),
           ),
