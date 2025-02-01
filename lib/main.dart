@@ -10,7 +10,7 @@ import 'common/app_theme.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
-        create: (_)=>ThemeManager(),
+        create: (_)=>ThemeManager()..getTheme()..getLocale(),
       child: MyApp(),
     )
       );

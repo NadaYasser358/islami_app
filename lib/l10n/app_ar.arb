@@ -3,5 +3,9 @@
 "suraName":"اسم السورة",
 "suraType":"نوعها",
 "hadithNum":"رقم الحديث",
-"hadithData":"نص الحديث"
+"hadithData":"نص الحديث",
+"sebhaNum":"عدد التسبيحات",
+"darkMode":"المظهر الداكن",
+"language":"اللغة"
+
 }
