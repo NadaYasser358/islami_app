@@ -52,7 +52,7 @@ class SuraDetailsScreen extends StatelessWidget {
                     children: [
                       RichText(text: TextSpan(
                         children: sura.verses.map((e) => TextSpan(text: '$e(${sura.verses.indexOf(e)+1}) ')).toList(),
-                        style: AppTextStyles.suraHadithText,
+                        style: AppTextStyles.suraHadithText.copyWith(color: Theme.of(context).colorScheme.onPrimary),
 
                       ),
                           textAlign: TextAlign.center,
