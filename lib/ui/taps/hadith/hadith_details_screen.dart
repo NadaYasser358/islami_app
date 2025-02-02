@@ -44,7 +44,7 @@ class HadithDetailsScreen extends StatelessWidget {
                   ),
                   Expanded(
                     child: SingleChildScrollView(
-                        child: Text(hadith.text,style: AppTextStyles.suraHadithText,textAlign: TextAlign.center,textDirection: TextDirection.rtl,),
+                        child: Text(hadith.text,style: AppTextStyles.suraHadithText.copyWith(color: Theme.of(context).colorScheme.onPrimary),textAlign: TextAlign.center,textDirection: TextDirection.rtl,),
                     ),
                   )
                 ],
