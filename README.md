@@ -1,16 +1,27 @@
 # islami_app
 
-A new Flutter project.
+Islamy is a mobile app designed to help users with their daily Islamic practices, including Quran & Hadith reading, sebha counter . 
 
-## Getting Started
+## Main Features
 
-This project is a starting point for a Flutter application.
+- Quran reading
+- Hadith reading
+- Sebha counter
+- Quran radio
+- App settings
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Outputs(what i have learnd)
+This is my start with flutter full mobile app so my learning outputs are:
+   - Native splash screen customized with android 12
+   - reading data from text files
+   - Bottom navigation bar widget for handling navigation in app
+   - learning to animate image of sebha with Transform widget
+   - Sync concept
+   - handling the app theme (dark/light) mode
+   - handling the app language
+   - how to use color scheme
+   - code organizing
+   - state management
+   - shared preferences
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
